@@ -17,6 +17,6 @@ jobs:
 - deployment: VMDeploy
   displayName: web
   environment:
-    name:  cmc
+    name:  DeployVM
     resourceType: VirtualMachine
     tags: web
