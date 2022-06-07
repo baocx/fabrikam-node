@@ -13,4 +13,10 @@ jobs:
       Contents: '**/target/*.?(war|jar)'
       TargetFolder: $(Build.ArtifactStagingDirectory)
   - upload: $(Build.ArtifactStagingDirectory)
-    artifact: drop
+    artifact: drop  
+- deployment: VMDeploy
+  displayName: web
+  environment:
+    name:  cmc
+    resourceType: VirtualMachine
+    tags: web
